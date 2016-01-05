@@ -1,6 +1,6 @@
 {
   "name": "ember-simple-auth-registration",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Ember Simple Auth Authenticator for User Registration.",
   "directories": {
     "doc": "doc",
