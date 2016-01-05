@@ -38,7 +38,10 @@
     "ember-try": "~0.0.8"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember-simple-auth",
+    "registration",
+    "oauth2"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.5",
