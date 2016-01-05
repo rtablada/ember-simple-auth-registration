@@ -31,4 +31,13 @@ This will JSON stringify the `userData` variable and pass it as a `user_data` pa
 
 ## Customization
 
-You will likely want to customize
+You will likely want to customize the `registrationEndpoint` to match the API route for your registration:
+
+```js
+// app/authenticators/register.js
+import Registration from 'ember-simple-auth-registration/authenticators/oauth2-password-registration';
+
+export default Registration.extend({
+  registrationEndpoint: '/api/register',
+});
+```
