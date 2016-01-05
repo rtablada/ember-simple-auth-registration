@@ -35,6 +35,7 @@
     "ember-disable-proxy-controllers": "^1.0.1",
     "ember-export-application-global": "^1.0.4",
     "ember-resolver": "^2.0.3",
+    "ember-simple-auth": "^1.0.1",
     "ember-try": "~0.0.8"
   },
   "keywords": [
@@ -44,8 +45,7 @@
     "oauth2"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.1.5",
-    "ember-simple-auth": "^1.0.1"
+    "ember-cli-babel": "^5.1.5"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
