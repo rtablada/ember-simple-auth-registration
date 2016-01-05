@@ -1,26 +1,34 @@
-# Ember-simple-auth-registration
+# Ember Simple Auth Registration Authenticator
 
-This README outlines the details of collaborating on this Ember addon.
+This addon provides an OAuth2 password grant Authenticator that allows passing of user profile information for user registration.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+`ember install ember-simple-auth-registration`
 
-## Running
+## Use
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+In your application create an authorizer that extends from `oauth2-password-registration`:
 
-## Running Tests
+```js
+// app/authenticators/register.js
+import Registration from 'ember-simple-auth-registration/authenticators/oauth2-password-registration';
 
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+export default Registration.extend();
+```
 
-## Building
+Then in your registration action:
 
-* `ember build`
+```js
+let { identification, password } = this.getProperties('identification', 'password');
+let userData = /* get your user data some way */ {};
+this.get('session').authenticate('authenticator:register', identification, password, userData).catch((reason) => {
+  this.set('errorMessage', reason.error || reason);
+});
+```
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+This will JSON stringify the `userData` variable and pass it as a `user_data` parameter to your server.
+
+## Customization
+
+You will likely want to customize
