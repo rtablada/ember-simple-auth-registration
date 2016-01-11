@@ -1,5 +1,7 @@
 # Ember Simple Auth Registration Authenticator
 
+[![npm version](https://badge.fury.io/js/ember-simple-auth-registration.svg)](http://badge.fury.io/js/ember-simple-auth-registration)
+[![Ember Observer Score](http://emberobserver.com/badges/ember-simple-auth-registration.svg)](http://emberobserver.com/addons/ember-simple-auth-registration)
 This addon provides an OAuth2 password grant Authenticator that allows passing of user profile information for user registration.
 
 ## Installation
